@@ -1,0 +1,12 @@
+body {
+  background-color: #fffac8; 
+}
+
+#avatar {
+  width: 230px;
+  height: auto;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 9999;
+}
