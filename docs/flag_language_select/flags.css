@@ -1,0 +1,36 @@
+
+ :root {
+  --flag-width: 170px;
+  --flag-height: 400px;
+  --gap-size: 30px;
+}
+
+
+/* Układ flag */
+
+.language-select {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.language-select button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 var(--gap-size); /* Odstęp między przyciskami */
+  }
+
+.language-select img {
+  width: var(--flag-width);
+  height: var(--flag-height);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.language-select img:hover {
+  transform: scale(1.1);
+}

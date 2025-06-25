@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasia: flag_language_select</title>
+  <link rel="stylesheet" href="flags.css">
+</head>
+<body>
+  <div class="language-select">
+    <button type="button" data-lang="pl">
+      <img src="pl.png" alt="pl">
+    </button>
+    <button type="button" data-lang="en">
+      <img src="uk.png" alt="eng">
+    </button>
+    <button type="button" data-lang="it">
+      <img src="it.png" alt="it">
+    </button>
+  </div>
+
+   <script>
+    document.querySelectorAll('.language-select button').forEach(button => {
+    button.addEventListener('click', function() {
+    const chosenLang = this.getAttribute('data-lang');
+    localStorage.setItem('lang', chosenLang);
+    window.location.href = 'index.html';
+  });
+});
+</script>
+   
+</body>
+</html>
