@@ -144,3 +144,16 @@ function gameLoop() {
   requestAnimationFrame(gameLoop); // repeat ~60 times per second
 }
 requestAnimationFrame(gameLoop);
+
+const arrowButtons = document.querySelectorAll('.arrow');
+
+document.addEventListener("keydown", e => {
+  const arrow = document.querySelector(`.arrow[data-dir="${e.key}"]`);
+  if (arrow) arrow.classList.add("active");
+});
+
+document.addEventListener("keyup", e => {
+  const arrow = document.querySelector(`.arrow[data-dir="${e.key}"]`);
+  if (arrow) arrow.classList.remove("active");
+});
+

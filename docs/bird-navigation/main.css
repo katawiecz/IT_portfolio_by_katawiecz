@@ -10,3 +10,43 @@ body {
   left: 50px;
   z-index: 9999;
 }
+
+#arrow-controls {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  display: grid;
+  grid-template-areas:
+    ".   up    ."
+    "left  .  right"
+    ".  down   .";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5px;
+  z-index: 9999;
+}
+
+.arrow {
+  background-color: #eeeeee;
+  color: #333;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.arrow.up    { grid-area: up; }
+.arrow.down  { grid-area: down; }
+.arrow.left  { grid-area: left; }
+.arrow.right { grid-area: right; }
+
+.arrow.active {
+  background-color: #88ccff;
+  color: #000;
+}
